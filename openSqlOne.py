@@ -2,7 +2,7 @@ import streamlit as st
 import sqlite3
 
 # Conecta ao banco de dados SQLite
-conn = sqlite3.connect(r'C:\Users\ACER\Desktop\streamlit\bancoDatas.db')
+conn = sqlite3.connect('bancoDatas.db')
 cursor = conn.cursor()
 
 # Realiza uma consulta
