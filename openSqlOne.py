@@ -2,7 +2,6 @@ import streamlit as st
 import sqlite3
 import datetime
 import re
-import locale
 from datetime import datetime
 
 @st.dialog(title="Pesquisa bem-sucedida!", width="small")
@@ -168,7 +167,7 @@ def main():
     symb = '_____'
     elem = ['data', 'categoria', 'fundamento']
     padDat = r'\d{2}/\d{2}/\d{4}'
-    fileDb = r'C:\Users\ACER\Desktop\streamlit\bancoDatas.db'
+    fileDb = 'bancoDatas.db'
     tableDb = 'bancoDatas'
     allDados = {}
     st.set_page_config(layout="wide", 
@@ -176,7 +175,6 @@ def main():
                        initial_sidebar_state="expanded")
     st.get_option("theme.primaryColor")
     st.set_option("client.showErrorDetails", True)
-    locale.setlocale(locale.LC_ALL, "de_DE")
 
     #Pesquisa todo o conteúdo do banco de dados
     units = fullSql()
